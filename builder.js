@@ -41,7 +41,7 @@ var surveyJSON = {
     {
      "type": "radiogroup",
      "name": "activity_disctractor",
-     "indent": 5,
+     "indent": 10,
      "titleLocation": "hidden",
      "choices": [
       "0",
@@ -63,7 +63,7 @@ var surveyJSON = {
     {
      "type": "radiogroup",
      "name": "control_imc",
-     "indent": 15,
+     "indent": 20,
      "isRequired": true,
      "titleLocation": "hidden",
      "choices": [

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html><head>
         <title>exp_2 master</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -24,7 +25,7 @@
                   <!-- ko if: isShowProgressBarOnTop --><!-- /ko -->
                   <!-- ko if: isNavigationButtonsShowing === 'top' || isNavigationButtonsShowing === 'both' --><!-- /ko -->
                   <!-- ko if: koCurrentPage -->
-                  <div data-bind="attr: { id: koCurrentPage().id }, template: { name: 'survey-page', data: koCurrentPage, afterRender: koAfterRenderPage }" id="sp_109">
+                  <div data-bind="attr: { id: koCurrentPage().id }, template: { name: 'survey-page', data: koCurrentPage, afterRender: koAfterRenderPage }" id="sp_111">
   <div data-bind="css: data.css.page.root">
       <h4 data-bind="visible: data.showPageTitles, css: data.css.pageTitle">
           <!-- ko template: { name: 'survey-string', data: locTitle } -->
@@ -46,7 +47,7 @@
     <!-- ko foreach: { data: rows, as: 'row'} -->
     <!-- ko if: row.visible -->
     <div data-bind="css: panel.cssClasses.row" class="sv_row">
-        <!-- ko foreach: { data: row.elements, as: 'question' , afterRender: row.koAfterRender } --><!-- ko if: question.isVisible --><!-- ko template: { name: question.koElementType, data: question, afterRender: $parent.koElementAfterRender } --><div data-bind="css: question.koRootClass(), style: { paddingLeft: question.paddingLeft, paddingRight: question.paddingRight, width: question.renderWidth }, attr: {id: question.id, name: question.name}" class="sv_qstn" style="width: 100%;" id="sq_119" name="instructions_ioed_pre">
+        <!-- ko foreach: { data: row.elements, as: 'question' , afterRender: row.koAfterRender } --><!-- ko if: question.isVisible --><!-- ko template: { name: question.koElementType, data: question, afterRender: $parent.koElementAfterRender } --><div data-bind="css: question.koRootClass(), style: { paddingLeft: question.paddingLeft, paddingRight: question.paddingRight, width: question.renderWidth }, attr: {id: question.id, name: question.name}" class="sv_qstn" style="width: 100%;" id="sq_124" name="post_rating_inst">
         <!-- ko if: question.hasTitleOnLeftTop --><!-- /ko -->
         <div data-bind="css: question.koContentClass">
             <!-- ko if: question.errorLocation == 'top' -->
@@ -58,11 +59,7 @@
 
 
 <p>
-
-</p><h1><center>Rating Scale</center></h1>
-<br>
-With the climate change example in mind, please rate your understanding on the topics below using the 7-point scale you just read. 
-<p></p>
+Now, please rate again your knowledge on the topic you just provided a written explanation using the 7-point understanding scale.</p>
 
 
 </div><!-- /ko -->
@@ -84,7 +81,7 @@ With the climate change example in mind, please rate your understanding on the t
     
     <!-- ko if: row.visible -->
     <div data-bind="css: panel.cssClasses.row" class="sv_row">
-        <!-- ko foreach: { data: row.elements, as: 'question' , afterRender: row.koAfterRender } --><!-- ko if: question.isVisible --><!-- ko template: { name: question.koElementType, data: question, afterRender: $parent.koElementAfterRender } --><div data-bind="css: question.koRootClass(), style: { paddingLeft: question.paddingLeft, paddingRight: question.paddingRight, width: question.renderWidth }, attr: {id: question.id, name: question.name}" class="sv_qstn" style="padding-left: 20px; width: 100%;" id="sq_120" name="ioed_pre">
+        <!-- ko foreach: { data: row.elements, as: 'question' , afterRender: row.koAfterRender } --><!-- ko if: question.isVisible --><!-- ko template: { name: question.koElementType, data: question, afterRender: $parent.koElementAfterRender } --><div data-bind="css: question.koRootClass(), style: { paddingLeft: question.paddingLeft, paddingRight: question.paddingRight, width: question.renderWidth }, attr: {id: question.id, name: question.name}" class="sv_qstn" style="padding-left: 20px; width: 109%;height: 88px;" id="sq_125" name="post_rating_score">
         <!-- ko if: question.hasTitleOnLeftTop --><!-- /ko -->
         <div data-bind="css: question.koContentClass">
             <!-- ko if: question.errorLocation == 'top' -->
@@ -94,7 +91,7 @@ With the climate change example in mind, please rate your understanding on the t
             <!-- /ko -->
             <!-- ko template: { name: question.koTemplateName(), data: question, afterRender: question.koQuestionAfterRender } --><div data-bind="css: question.koCss().tableWrapper"> 
  <fieldset>
-      <legend data-bind="attr: { 'aria-label': question.locTitle.renderedHtml }" aria-label="ioed_pre"></legend>
+      <legend data-bind="attr: { 'aria-label': question.locTitle.renderedHtml }" aria-label="post_rating_score"></legend>
       <table data-bind="css: question.koCss().root" class="table sv_q_matrix">
             <!-- ko if: question.showHeader -->
             <thead>
@@ -173,7 +170,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <td data-bind="visible: question.hasRows, css: question.koCss().cell">
                       <!-- ko template: { name: 'survey-string', data: row.locText } -->
     <!-- ko ifnot: koHasHtml -->
-    <span style="position: static;" data-bind="text: koRenderedHtml">Nuclear Energy</span>
+    <span style="position: static;width: 97.867px;height: 35px;" data-bind="text: koRenderedHtml">Cryptocurrencies</span>
     <!-- /ko -->
     <!-- ko if: koHasHtml --><!-- /ko -->
 <!-- /ko -->
@@ -183,7 +180,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="1 Vague Understanding">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="1" id="sq_120i_n_energy_0">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="1" id="sq_125i_crypto_0">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -200,7 +197,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="2">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="2" id="sq_120i_n_energy_1">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="2" id="sq_125i_crypto_1">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -217,7 +214,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="3">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="3" id="sq_120i_n_energy_2">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="3" id="sq_125i_crypto_2">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -234,7 +231,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="4 Intermediate Understanding">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="4" id="sq_120i_n_energy_3">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="4" id="sq_125i_crypto_3">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -251,7 +248,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="5">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="5" id="sq_120i_n_energy_4">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="5" id="sq_125i_crypto_4">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -268,7 +265,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="6">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="6" id="sq_120i_n_energy_5">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="6" id="sq_125i_crypto_5">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -285,400 +282,7 @@ With the climate change example in mind, please rate your understanding on the t
                   <!-- ko if: !question.hasCellText -->
                   <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="7 Complete Understanding">
                       <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_n_energy" aria-required="true" aria-label="ioed_pre" value="7" id="sq_120i_n_energy_6">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">7 Complete Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  <!-- /ko -->
-              </tr>
-              
-              <tr data-bind="css: question.koCss().row">
-                  <td data-bind="visible: question.hasRows, css: question.koCss().cell">
-                      <!-- ko template: { name: 'survey-string', data: row.locText } -->
-    <!-- ko ifnot: koHasHtml -->
-    <span style="position: static;" data-bind="text: koRenderedHtml">Brexit</span>
-    <!-- /ko -->
-    <!-- ko if: koHasHtml --><!-- /ko -->
-<!-- /ko -->
-                  </td>
-                  <!-- ko foreach: question.koVisibleColumns -->
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="1 Vague Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="1" id="sq_120i_brexit_0">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">1 Vague Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="2">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="2" id="sq_120i_brexit_1">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="3">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="3" id="sq_120i_brexit_2">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="4 Intermediate Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="4" id="sq_120i_brexit_3">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">4 Intermediate Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="5">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="5" id="sq_120i_brexit_4">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="6">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="6" id="sq_120i_brexit_5">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="7 Complete Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_brexit" aria-required="true" aria-label="ioed_pre" value="7" id="sq_120i_brexit_6">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">7 Complete Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  <!-- /ko -->
-              </tr>
-              
-              <tr data-bind="css: question.koCss().row">
-                  <td data-bind="visible: question.hasRows, css: question.koCss().cell">
-                      <!-- ko template: { name: 'survey-string', data: row.locText } -->
-    <!-- ko ifnot: koHasHtml -->
-    <span style="position: static;" data-bind="text: koRenderedHtml">Cryptocurrencies</span>
-    <!-- /ko -->
-    <!-- ko if: koHasHtml --><!-- /ko -->
-<!-- /ko -->
-                  </td>
-                  <!-- ko foreach: question.koVisibleColumns -->
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="1 Vague Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="1" id="sq_120i_crypto_0">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">1 Vague Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="2">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="2" id="sq_120i_crypto_1">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="3">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="3" id="sq_120i_crypto_2">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="4 Intermediate Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="4" id="sq_120i_crypto_3">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">4 Intermediate Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="5">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="5" id="sq_120i_crypto_4">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="6">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="6" id="sq_120i_crypto_5">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="7 Complete Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_crypto" aria-required="true" aria-label="ioed_pre" value="7" id="sq_120i_crypto_6">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">7 Complete Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  <!-- /ko -->
-              </tr>
-              
-              <tr data-bind="css: question.koCss().row">
-                  <td data-bind="visible: question.hasRows, css: question.koCss().cell">
-                      <!-- ko template: { name: 'survey-string', data: row.locText } -->
-    <!-- ko ifnot: koHasHtml -->
-    <span style="position: static;" data-bind="text: koRenderedHtml">Genetically Modified Organisms</span>
-    <!-- /ko -->
-    <!-- ko if: koHasHtml --><!-- /ko -->
-<!-- /ko -->
-                  </td>
-                  <!-- ko foreach: question.koVisibleColumns -->
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="1 Vague Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="1" id="sq_120i_gmo_0">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">1 Vague Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="2">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="2" id="sq_120i_gmo_1">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="3">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="3" id="sq_120i_gmo_2">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="4 Intermediate Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="4" id="sq_120i_gmo_3">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text">4 Intermediate Understanding</span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="5">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="5" id="sq_120i_gmo_4">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="6">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="6" id="sq_120i_gmo_5">
-                          <span data-bind="css: question.koCss().materialDecorator">
-                            <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
-                                <circle r="6" cx="0" cy="0">
-                            </circle></svg>    
-                          </span>
-                          <span class="circle"></span>
-                          <span class="check"></span>
-                          <span style="display: none" data-bind="text: $data.locText.text"></span>
-                      </label>
-                  </td>
-                  <!-- /ko -->
-                  
-                  <!-- ko if: question.hasCellText --><!-- /ko -->
-                  <!-- ko if: !question.hasCellText -->
-                  <td data-bind="attr: { headers: $data.locText.renderedHtml }, css: question.koCss().cell" headers="7 Complete Understanding">
-                      <label data-bind="css: question.getItemCss(row, $data)" class="sv_q_m_label undefined">
-                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_120_gmo" aria-required="true" aria-label="ioed_pre" value="7" id="sq_120i_gmo_6">
+                          <input type="radio" data-bind="css: question.koCss().itemValue, attr: {name: row.fullName, 'aria-required': question.isRequired, 'aria-label': question.locTitle.renderedHtml, value: '' + $data.value, id: question.inputId + '_' + row.name + '_' + $index()}, checked: row.koValue, enable: !question.isReadOnly" name="sq_125_crypto" aria-required="true" aria-label="post_rating_score" value="7" id="sq_125i_crypto_6">
                           <span data-bind="css: question.koCss().materialDecorator">
                             <svg data-bind="css:question.koCss().itemDecorator" viewBox="-12 -12 24 24" class="sv-hidden">
                                 <circle r="6" cx="0" cy="0">
@@ -892,14 +496,7 @@ With the climate change example in mind, please rate your understanding on the t
       <!-- /ko -->
   </div>
 </script>
-<script type="text/html" id="survey-question-comment">
-  <!--ko if: !question.isInputTextUpdate -->
-  <textarea type="text" data-bind="attr: {'readonly': question.isReadOnly, 'disabled': question.isReadOnly, maxLength: question.getMaxLength(), cols: question.cols, rows: question.rows, id: question.inputId, placeholder: question.placeHolder, 'aria-label': question.locTitle.renderedHtml}, value:question.value, css: question.koCss().root"></textarea>
-  <!--/ko-->
-  <!--ko if: question.isInputTextUpdate -->
-  <textarea type="text" data-bind="attr: {'readonly': question.isReadOnly, 'disabled': question.isReadOnly, maxLength: question.getMaxLength(), cols: question.cols, rows: question.rows, id: question.inputId, placeholder: question.placeHolder, 'aria-label': question.locTitle.renderedHtml}, textInput:question.value, css: question.koCss().root"></textarea>
-  <!--/ko-->
-</script>
+<script type="text/html" id="survey-question-comment"></script>
  <script type="text/html" id="survey-question-dropdown">
   <!-- ko ifnot: question.isReadOnly -->
   <div data-bind="css: question.koCss().selectWrapper">
