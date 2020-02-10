@@ -10,7 +10,7 @@ var surveyJSON = {
     {
      "type": "html",
      "name": "introduction",
-     "html": "<!DOCTYPE html>\n<html>\n<body>\n\n<h1><center>Welcome!</center></h1>\n<br />\n<br />\n<p>Thank you for taking part in this experiment! The data you will provide here will be kept anonymous and only shared with the researches supervising this master thesis.\n<br />\n<br />Your participation in this experiment is voluntary. You may quit at any moment without negative consequences.\n<br />\n<br />\nPlease read carefully the instructions and answer the questions fully.</p>\n<br />\n<br />\n</body>\n</html>\n"
+     "html": "<!DOCTYPE html>\n<html>\n<body>\n\n<h1><center>Welcome!</center></h1>\n<br />\n<br />\n<p>Thank you for taking part in this experiment! The data you will provide here will be kept anonymous and only shared with the researchers supervising this master thesis.\n<br />\n<br />Your participation in this experiment is voluntary. You may quit at any moment without negative consequences.\n<br />\n<br />\nPlease read carefully the instructions and answer the questions fully.</p>\n<br />\n<br />\n</body>\n</html>\n"
     }
    ]
   },
@@ -111,7 +111,7 @@ var surveyJSON = {
     {
      "type": "html",
      "name": "ins_news_negative",
-     "html": "</html>\n</br>\n</br>\nNow, you will see below a random news about one social topic. Please carefully read the whole piece before continue.</br>\n\n</html>"
+     "html": "</html>\n</br>\n</br>\nNow, you will see below a random news article about one social topic. Please carefully read the whole piece before continue.</br>\n\n</html>"
     },
     {
      "type": "html",
@@ -140,7 +140,7 @@ var surveyJSON = {
     {
      "type": "html",
      "name": "ins_news_positive",
-     "html": "</html>\n</br>\n</br>\nNow, you will see below a random news about one social topic. Please carefully read the whole piece before continue.</br>\n\n</html>"
+     "html": "</html>\n</br>\n</br>\nNow, you will see below a random news article about one social topic. Please carefully read the whole piece before continue.</br>\n\n</html>"
     },
     {
      "type": "html",
@@ -194,7 +194,7 @@ var surveyJSON = {
     {
      "type": "html",
      "name": "7_understanding",
-     "html": "<!DOCTYPE html>\n<html>\n<body>\n<p>\n<h1><center>Rating Scale Instructions</center></h1>\n</br>\n<b>Level 7 of knowledge: </b>A person with level 7 of knowledge has a deeply and detailed knowledge of how global warming occurs and what role human activity has played on accelerating it. For instance, she will know that Earth's normal temperature is a natural process that follows from the Earth’s absorption of sunlight. As the Earth transforms sunlight’s energy into infrared light, greenhouse gases (methane, carbon dioxide, etc.) in the air absorb that energy causing the atmosphere to heat up.\n<br />\n<br />\nShe will also know that the warm atmosphere emits more infrared light causing it to be re-absorbed several times before eventually returns to space, keeping the Earth warm. The longer the infrared light stays in the atmosphere, the warmer the water and ground will get.\n<br />\n<br />It will be clear for her that since the industrial age, human activities like energy, food, and goods production has increased the amount of methane and carbon dioxide released to the atmosphere. Such increase causes an extra absorption of infrared light that slows the rate at which sunlight’s energy escapes to space. As more infrared light is captured, the average temperature rises contributing to the global warming.\n</p>\n</body>\n</html>\n"
+     "html": "<!DOCTYPE html>\n<html>\n<body>\n<p>\n<h1><center>Rating Scale Instructions</center></h1>\n</br>\n<b>Level 7 of knowledge: </b>A person with level 7 of knowledge has a deeply and detailed knowledge of how global warming occurs and what role human activity has played on accelerating it. For instance, she will know that Earth's normal temperature is a natural process that follows from the Earth’s absorption of sunlight. As the Earth transforms sunlight’s energy into infrared light, greenhouse gases (methane, carbon dioxide, etc.) in the air absorb that energy causing the atmosphere to heat up.\n<br />\n<br />\nShe will also know that the warm atmosphere emits more infrared light causing it to be re-absorbed several times before it  eventually returns to space, keeping the Earth warm. The longer the infrared light stays in the atmosphere, the warmer the water and ground will get.\n<br />\n<br />It will be clear for her that since the industrial age, human activities like energy, food, and goods production has increased the amount of methane and carbon dioxide released to the atmosphere. Such increase causes an extra absorption of infrared light that slows the rate at which sunlight’s energy escapes to space. As more infrared light is captured, the average temperature rises contributing to the global warming.\n</p>\n</body>\n</html>\n"
     }
    ]
   },
@@ -336,7 +336,7 @@ var surveyJSON = {
 	{
      "type": "html",
      "name": "attitude_inst",
-     "html": "In this section, please rate the items in the table below indicating the extend to which you agree or disagree to each of the topics. For example, if you totally agree with the subject, please place a \"7\" (totally agree) on the likert scale next to it. On the contrary, if you totally disagree with the subject, please place a \"1\" (totally disagree) on the likert scale next to it. In case you don't hold an opinion on the topic, please place a \"4\" (uncertain) on the likert scale. "
+     "html": "In this section, please rate the items in the table below indicating the extend to which you agree or disagree to each of the topics. For example, if you totally agree with the subject, please put a \"7\" (totally agree) on the likert scale next to it. On the contrary, if you totally disagree with the subject, please put a \"1\" (totally disagree) on the likert scale next to it. In case you don't hold an opinion on the topic, please put a \"4\" (uncertain) on the likert scale. "
     },
     {
      "type": "matrix",
@@ -437,7 +437,7 @@ var surveyJSON = {
       "6",
       {
        "value": "7",
-       "text": "7 Complete positive"
+       "text": "7 Completely positive"
       }
      ],
      "rows": [
