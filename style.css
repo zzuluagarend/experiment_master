@@ -2,3 +2,45 @@ body {
 	margin: 0 auto; 
 	max-width: 900px;
 }
+
+input.sv_prev_btn {
+	display: none;
+}
+
+table.table.sv_q_matrix {
+	text-align: center;
+	vertical-align: middle;
+}
+
+table.table.sv_q_matrix, tr {
+	height: 50px;
+}
+
+#sq_122i {
+	/* textbox */
+	width: 900px;
+	height: 100;
+}
+
+#sq_123i {
+	/* textbox */
+	width: 900px;
+	height: 100;
+}
+
+#sq_104 {
+	margin: auto;
+    text-align: center;
+}
+
+#sq_106 {
+	margin: auto;
+    text-align: center;
+}
+
+
+#sq_114 {
+	margin: auto;
+    text-align: center;
+}
+
