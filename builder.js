@@ -91,15 +91,15 @@ var surveyJSON = {
      "items": [
       {
        "name": "crt_1",
-       "title": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball.  How much does the ball cost?"
+       "title": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball.  How much does the ball cost? $ ____"
       },
       {
        "name": "crt_2",
-       "title": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take  100 machines to make 100 widgets?"
+       "title": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take  100 machines to make 100 widgets? ____ minutes"
       },
       {
        "name": "crt_3",
-       "title": "In a lake, there is a patch of lily pads. Every day, the patch doubles in size.  If it takes 48 days for the patch to cover the entire lake, how long would it  take for the patch to cover half of the lake?"
+       "title": "In a lake, there is a patch of lily pads. Every day, the patch doubles in size.  If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake? ____ days"
       }
      ]
     }
@@ -129,7 +129,7 @@ var surveyJSON = {
      "items": [
       {
        "name": "distractor_negative",
-       "title": "What was the rate of transactions per second mentioned in the text? Please input only the number"
+       "title": "What was the first rate of transactions per second mentioned in the text? Please input only the number"
       }
      ]
     }
@@ -381,7 +381,7 @@ var surveyJSON = {
       },
       {
        "value": "euthanasia",
-       "text": "Euthanasia"
+       "text": "Euthanasia (assisted dying by medical personnel)"
       },
       {
        "value": "homeo",
@@ -506,7 +506,7 @@ var surveyJSON = {
      "type": "text",
      "name": "language",
      "title": "Native languages:",
-     "description": "(i.e. The language spoken at home when you were a child)"
+     "description": "(i.e., The language spoken at home when you were a child)"
     }
    ]
   }
