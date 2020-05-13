@@ -134,8 +134,7 @@ var surveyJSON = {
      ]
     }
    ]
-  }:*/
-  {
+  }:{
    "name": "news_stimulus_positive",
    "elements": [
     {
@@ -168,6 +167,50 @@ var surveyJSON = {
       {
        "value": "3",
        "text": "Stably"
+      }
+     ],
+     "rows": [
+      {
+       "value": "ques_1",
+       "text": "Which company is not mentioned in the text?"
+      }
+     ]
+    }
+   ]
+  },*/
+    {
+   "name": "news_stimulus_neutral",
+   "elements": [
+    {
+     "type": "html",
+     "name": "ins_news_neutral",
+     "html": "</html>\n</br>\n</br>\nNow, you will see below a random news article about one social topic. Please carefully read the whole piece before continue.</br>\n\n</html>"
+    },
+    {
+     "type": "html",
+     "name": "neutral_news",
+     "html": "</html>\n<h1><center>Is Europe binning meat and dairy? Greece opens its first fully vegan hotel</center></h1>\n</br>\n<p>A boutique hotel on the island of Mykonos has become the first and only in Greece to market itself as fully vegan. From the spa to the Mediterranean menu, everything at the hotel is plant-based.\n</br>\n</br>\nLocated in Ano Mera, Mykonos, Koukoumi hotel plans to open its doors this summer. The hotel has been designed to fit within traditional Myconian architecture and has 14 suites in total. The founders’ philosophy prioritises sustainability on every front, with a vegan menu, eco-friendly mattresses, solar powered water heaters and even a magnesium pool. Spa therapists also provide vegan beauty treatments and daily group exercise classes take place in the fitness centre to encourage a healthy lifestyle.\n</br>\n</br>\nKoukoumi will offer two bespoke packages, the ‘Detox package’ and the ‘Energy Boost’ package which are both full-board stays spread over five days. Koukoumi’s vegan cuisine is Greek-inspired and is made up of exclusively vegan and raw food. For breakfast, the bread and cakes are baked in house and daily meals include soups, salads, fresh pasta, vegan burgers, pizzas, and poke bowls.\n</br>\n</br>\nAccording to one industry-led article in January of this year, the two trends set to shape hospitality and catering in 2020 are sustainability and veganism. From McDonald’s and Greggs in the UK to Michelin star dining in Europe, more and more restaurants are opting to include vegan and vegetarian meals. Pioneering chefs like Pietro Leemann in Milan and Alain Passard are leading the way to a plant-based future, by inspiring meat-eating diners to go for vegan options simply based on quality and taste.\n</br>\n</br>\n\"When we first started working with hotels to attract vegan guests, it was the wellness and sustainability-oriented hotels jumping at the opportunity. Now, we see mainstream hotel groups adding plant-based burgers to their snack bars, planning vegan brunch menus, and sourcing vegan wines.\" Said Meredith Marin, founder and CEO of Vegan Hospitality.\n</br>\n</br>\nThere were 11,655 vegan food and drink businesses launched in Europe in 2019, an increase of 93 per cent from 2016, according to The Vegan Society. Germany is now among global leaders when it comes to vegan product development. Berlin has been called \"the most vegan-friendly city in the world\" boasting around 600 veggie restaurants around the capital.\n</br>\n</br>\nMany pubs, restaurants, and hotels have embraced vegan dishes over the last few years, he goes on, but there are still some independent businesses that haven’t caught up with the growing demand. As a result, they are “missing out on sales.” It just shows “how far veganism has come”, he concludes, it’s now recognised as a \"mainstream lifestyle choice.\"\n</p>\n</html>"
+    },
+    {
+     "type": "matrix",
+     "name": "control_neutral",
+     "correctAnswer": {
+      "Row 1": "Column 3"
+     },
+     "isRequired": true,
+     "titleLocation": "hidden",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Milan"
+      },
+      {
+       "value": "2",
+       "text": "Berlin"
+      },
+      {
+       "value": "3",
+       "text": "London"
       }
      ],
      "rows": [
@@ -409,7 +452,7 @@ var surveyJSON = {
     }
    ]
   },
-  {
+  /*{
    "name": "valence",
    "elements": [
     {
@@ -445,6 +488,48 @@ var surveyJSON = {
       {
        "value": "crypto",
        "text": "Cryptocurrencies"
+      }
+     ],
+     "rowsOrder": "random"
+    }
+   ]
+  },*/
+  {
+   "name": "valence",
+   "elements": [
+    {
+     "type": "html",
+     "name": "valence_inst",
+     "html": "<!DOCTYPE html>\n<html>\n<body>\n<p>\nFinally, please indicate how positively/negatively framed was the news piece you read before on the topic <b>vegan diet</b>.\n</p>\n</body>\n</html>\n"
+    },
+    {
+     "type": "matrix",
+     "name": "valence_score",
+     "indent": 1,
+     "isRequired": true,
+     "titleLocation": "hidden",
+     "columns": [
+      {
+       "value": "1",
+       "text": "1 Completely negative"
+      },
+      "2",
+      "3",
+      {
+       "value": "4",
+       "text": "4 Neutral"
+      },
+      "5",
+      "6",
+      {
+       "value": "7",
+       "text": "7 Completely positive"
+      }
+     ],
+     "rows": [
+      {
+       "value": "vegan",
+       "text": "Vegan diet"
       }
      ],
      "rowsOrder": "random"
