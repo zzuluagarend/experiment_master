@@ -105,8 +105,8 @@ var surveyJSON = {
     }
    ]
   },
-  /*Math.random()>0.5?{
-   "name": "news_stimulus_negative",
+  Math.random()>0.5?{
+  /* "name": "news_stimulus_negative",
    "elements": [
     {
      "type": "html",
@@ -134,7 +134,7 @@ var surveyJSON = {
      ]
     }
    ]
-  }:{
+  },*/
    "name": "news_stimulus_positive",
    "elements": [
     {
@@ -177,8 +177,8 @@ var surveyJSON = {
      ]
     }
    ]
-  },*/
-    {
+  }:
+  {
    "name": "news_stimulus_neutral",
    "elements": [
     {
