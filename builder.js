@@ -452,7 +452,7 @@ var surveyJSON = {
     }
    ]
   },
-  /*{
+  {
    "name": "valence",
    "elements": [
     {
@@ -493,8 +493,8 @@ var surveyJSON = {
      "rowsOrder": "random"
     }
    ]
-  },*/
-  {
+  },
+  /*{
    "name": "valence",
    "elements": [
     {
@@ -535,7 +535,7 @@ var surveyJSON = {
      "rowsOrder": "random"
     }
    ]
-  },
+  },*/
   {
    "name": "demographics",
    "elements": [
